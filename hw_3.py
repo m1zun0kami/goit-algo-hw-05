@@ -48,12 +48,10 @@ def count_logs_by_level(logs: list) -> dict:
     counts = {}
     for log in logs:
         level = log['level']
-
         if level in counts:
             counts[level] += 1
         else:
             counts[level] = 1
-
     return counts
 
 
@@ -79,7 +77,6 @@ def main() -> None:
             level = sys.argv[2].upper()
             logs = filter_logs_by_level(logs, level)
             print(f"\nДеталі для логів рівня {level}:")
-
             for log in logs:
                 print(f"{log['date']} {log['time']} - {log['message']}")
     except FileNotFoundError:
