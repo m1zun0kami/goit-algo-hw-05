@@ -5,6 +5,7 @@ def caching_fibonacci():
     """
     cache = {}
 
+    
     def fibonacci(n):
         """
         Обчислює число фибоначі за номером n.
